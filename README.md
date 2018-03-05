@@ -101,7 +101,7 @@ public class Students extends Fragment {
         android:layout_height="match_parent" />
 </LinearLayout>
 
-####  Layout File {CUSTOM_LAYOUT_ID_HERE}
+####  Custom Layout for ListView
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
