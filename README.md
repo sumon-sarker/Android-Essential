@@ -43,3 +43,43 @@ public class UserAdapter extends ArrayAdapter<Student> {
     }
 }
 ```
+
+####  Fragment Class {Students}
+```javascript
+package com.example.sumon.{APP_NAME_HERE};
+
+public class Students extends Fragment {
+
+    ArrayList<Student> studentList;
+    ListView LV;
+    UserAdapter usersAdapter;
+
+    public Students() {
+        /*CONFIG HERE*/
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_students, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        studentList = new ArrayList<>();
+        LV          = (ListView) view.findViewById(R.id.StudentList);
+
+        studentList.add(new Student("Name 1", "Phone 1"));
+        studentList.add(new Student("Name 2", "Phone 2"));
+        studentList.add(new Student("Name 3", "Phone 3"));
+        studentList.add(new Student("Name 4", "Phone 4"));
+        studentList.add(new Student("Name 5", "Phone 5"));
+
+        usersAdapter= new UserAdapter(getActivity(),R.layout.{CUSTOM_LAYOUT_ID_HERE},studentList);
+        LV.setAdapter(usersAdapter);
+    }
+}
+
+```
