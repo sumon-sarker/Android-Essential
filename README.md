@@ -1,4 +1,14 @@
-# Android-Essential [Android Studio 3.0]
+####  Model Class {Student}
+```javascript
+package com.example.sumon.{APP_NAME_HERE}.student;
 
-####  [ListView](https://github.com/sumon-sarker/Android-Essential/tree/ListView)
- - Create a List View with Custom Layout 
+public class Student {
+    public String name;
+    public String phone;
+
+    public Student(String name, String phone) {
+        this.name  = name;
+        this.phone = phone;
+    }
+}
+```
