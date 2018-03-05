@@ -83,6 +83,23 @@ public class Students extends Fragment {
 }
 
 ```
+####  Fragment Class {Students Layout}
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sumon.sisystem.Students"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ListView
+        android:id="@+id/StudentList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
 
 ####  Layout File {CUSTOM_LAYOUT_ID_HERE}
 <?xml version="1.0" encoding="utf-8"?>
