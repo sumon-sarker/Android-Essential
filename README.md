@@ -6,3 +6,8 @@
      SP.edit().putString("AuthUser",JO.toString()).commit();
 
      System.out.println("SP : "+ (SP.getString("AuthUser","")));
+
+####  Remove Session
+
+     SharedPreferences SP = getSharedPreferences("AuthUser", Context.MODE_PRIVATE);
+     SP.edit().remove("AuthUser").clear().commit();
