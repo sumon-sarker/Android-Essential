@@ -1,5 +1,8 @@
 # Android-Essential [Android Studio 3.0]
 
-####  Toast]
+####  Save Session
 
-    Toast.makeText(getActivity(), "This is my Toast message!", Toast.LENGTH_LONG).show();
+     SharedPreferences SP = getSharedPreferences("AuthUser", Context.MODE_PRIVATE); /*0 = Private Mode*/
+     SP.edit().putString("AuthUser",JO.toString()).commit();
+
+     System.out.println("SP : "+ (SP.getString("AuthUser","")));
