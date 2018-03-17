@@ -1,8 +1,12 @@
 # Android-Essential [Android Studio 3.0]
 
 ####  Save Session
+     
+     ProgressDialog progressDialog;
+     
+     ......
 
-     SharedPreferences SP = getSharedPreferences("AuthUser", Context.MODE_PRIVATE); /*0 = Private Mode*/
-     SP.edit().putString("AuthUser",JO.toString()).commit();
-
-     System.out.println("SP : "+ (SP.getString("AuthUser","")));
+     progressDialog = new ProgressDialog(YourClassName.this); /*getActivity()*/
+     progressDialog.setMessage("Signing in ...");
+     progressDialog.setCancelable(false);
+     progressDialog.show();
