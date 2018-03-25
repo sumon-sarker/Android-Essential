@@ -11,3 +11,9 @@
 
      SharedPreferences SP = getSharedPreferences("AuthUser", Context.MODE_PRIVATE);
      SP.edit().remove("AuthUser").clear().commit();
+
+#### Get and Parse JSON
+
+     SharedPreferences SP     = getSharedPreferences("AuthUser", Context.MODE_PRIVATE);
+     JSONObject JObj          = new JSONObject(SP.getString("AuthUser",""));
+     String FullName          = JObj.getString("full_name");
